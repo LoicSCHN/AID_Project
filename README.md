@@ -24,3 +24,43 @@ Le but de ce projet est de faire une analyse critique de l’algorithme du maria
 
 — Présentation Orale (15 mn) : Présentation de votre travail & Démonstration du systéme d’aide à la décision.
 
+# Pseudo-code ( Algorithme de Gale et Shapley )
+
+Entrée : 
+
+    Deux ensembles finis M (d’hommes) et W (de femmes) de cardinal n ;
+
+    Une famille L de relations de préférences ;
+         
+Sortie : 
+
+    Un ensemble S de couples engagés (homme ; femme) ;
+
+---
+
+    Initialiser tous les m ∈ M et w ∈ W à célibataire
+    
+    tant que ∃ homme célibataire m qui peut se proposer à une femme w {
+    
+       w = femme préférée de m parmi celles à qui il ne s'est pas déjà proposé
+       
+       si w est célibataire
+       
+         (m, w) forment un couple
+         
+       sinon un couple (m', w) existe
+       
+         si w préfère m à m'
+         
+           (m, w) forment un couple
+           
+            m' devient célibataire
+            
+         sinon
+         
+           (m', w) restent en couple
+           
+    }
+    
+    Retourner l’ensemble S des couples engagés
+    
