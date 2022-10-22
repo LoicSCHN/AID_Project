@@ -28,39 +28,27 @@ Le but de ce projet est de faire une analyse critique de l’algorithme du maria
 
 Entrée : 
 
-    Deux ensembles finis M (d’hommes) et W (de femmes) de cardinal n ;
+    Deux ensembles d'élèves et d'établissement avec leur préférence;
 
     Une famille L de relations de préférences ;
          
-Sortie : 
 
-    Un ensemble S de couples engagés (homme ; femme) ;
+Etape 0 : chaque élève soumet une liste ordonnée de vœux  
+Etape 1 : on ne considère que les vœux de rang 1  
+ * chaque école considère les élèves qui l’ont classée en 1er vœu  
+ * chaque école accepte temporairement les mieux classés dans la limite des places disponibles et rejette les autres.  
 
----
+. . .  
 
-    Initialiser tous les m ∈ M et w ∈ W à célibataire
+Etape k : les élèves rejetés à l’étape précédente candidatent
+sur leur vœu suivant  
+ * chaque école considère conjointement les élèves précédemment
+admis et les élèves lui faisant une offre à cette étape  
+ * les mieux classés sont temporairement acceptés et les autres
+sont rejetés  
+L’algorithme se termine au bout d’un nombre fini d’itérations
+lorsque plus aucun élève n’est rejeté.
     
-    tant que ∃ homme célibataire m qui peut se proposer à une femme w {
-    
-       w = femme préférée de m parmi celles à qui il ne s'est pas déjà proposé
-       
-       si w est célibataire
-       
-         (m, w) forment un couple
-         
-       sinon un couple (m', w) existe
-       
-         si w préfère m à m'
-         
-           (m, w) forment un couple
-           
-            m' devient célibataire
-            
-         sinon
-         
-           (m', w) restent en couple
-           
-    }
-    
-    Retourner l’ensemble S des couples engagés
-    
+Sortie :
+
+    Liste des affectations par couple
