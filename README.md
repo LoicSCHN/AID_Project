@@ -1,3 +1,23 @@
+# Utilisation
+
+Les fichiers .ipynb contiennent le code commenté avec tous les affichages à éxécuté par étape pour comprendre comment marche l'algo.  
+Les fichiers .py contiennent le code sans commentaires ni aucun affichage.
+
+Pour lancer l'algorithme :
+ * Avec main.ipynb :
+    * Exécuter les cellules
+    * La 3éme cellule va demander de rentrer le nombre d'établissement et d'élèves
+    * A la fin, le déroulement de l'algo va s'afficher et le résultat sera noté tout en bas
+    
+ * Avec main.py :
+    * Exécuter le fichier main.py
+    * Une saisie est demandée
+    * Rentrer le nombre d'établissement et d'élèves
+    * Le résultat s'affiche
+
+
+
+
 # Projet : Conception et implantation d’un système d’aide à la décision
 
 Le but de ce projet est de faire une analyse critique de l’algorithme du mariage stable. Pour cela, il vous est demandé de :
@@ -52,3 +72,5 @@ lorsque plus aucun élève n’est rejeté.
 Sortie :
 
     Liste des affectations par couple
+
+
