@@ -1,7 +1,9 @@
 import sys
 import subprocess
 subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "iteration_utilities"])
 import pandas as pd
+from iteration_utilities import duplicates
 
 subprocess.call("generator.py", shell=True)
 prefEtudiant = pd.read_csv("fichierEleves.csv", header=None, sep = ",").values.tolist() 
@@ -50,3 +52,4 @@ print("  ")
 print("----------------------------------RESULTATS-----------------------------------------")
 print("  ")
 print(res)
+print(list(duplicates(res)))
