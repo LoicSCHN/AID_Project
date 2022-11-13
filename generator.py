@@ -1,8 +1,11 @@
 import random
 import csv
+import sys
 
-n = int(input("Entrez le nombre d'élève et établissement : "))
-#n = 100
+
+
+#n = int(input("Entrez le nombre d'élève et établissement : "))
+n = int(sys.argv[1])
 
 
 listeEleve = []
