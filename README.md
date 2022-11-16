@@ -44,7 +44,7 @@ Le but de ce projet est de faire une analyse critique de l’algorithme du maria
 
 — Présentation Orale (15 mn) : Présentation de votre travail & Démonstration du systéme d’aide à la décision.
 
-# Algorithme de Gale et Shapley 
+# Algorithme de Gale et Shapley (Mariage stable)
 
 Entrée : 
 
