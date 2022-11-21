@@ -10,6 +10,8 @@ from iteration_utilities import duplicates
 prefEtudiant = pd.read_csv("fichierEleves.csv", header=None, sep = ",").values.tolist() 
 
 prefEtablissement = pd.read_csv("fichierEtablissements.csv", header=None, sep = ",").values.tolist()
+
+
 n = len(prefEtablissement)
 
 
@@ -45,7 +47,7 @@ def attribution(n, prefEtudiant, prefEtablissement):
           affectationEtablissement[etablissement] = etudiant
           affectationEtudiant[etudiant] = etablissement
          
-          #Son choix suivant passe à la femme suivante dans sa liste
+          #Son choix suivant passe à l'etablissement suivante dans sa liste
           suivant[etudiant] = suivant[etudiant] + 1
           #On l'enlève de la liste des etudiants libres
           etudiantLibre.pop(0)
@@ -105,8 +107,25 @@ def fonctionLineaire(x):
 
 file = open("testResultats.txt", "a")
 #print(res)
+print(" ",file=file)
+print("Priorite aux eleves : ",file=file)
 print("{}".format(res),file = file)
-print("Satisfaction des étudiants : ",file = file)
+print("Satisfaction des etablissement : ",file = file)
 print("{}".format(etudiantSatisfaction(len(prefEtudiant), res, prefEtudiant, prefEtablissement, fonctionLineaire)/n),file = file)
-print("Satisfaction des établissements : ",file = file)
+print("Satisfaction des etablissements : ",file = file)
+print("{}".format(etablissmentSatisfaction(len(prefEtudiant), res, prefEtudiant, prefEtablissement, fonctionLineaire)/n),file = file)
+
+
+
+
+res = attribution(len(prefEtudiant),prefEtablissement, prefEtudiant)
+
+
+#print(res)
+print(" ",file=file)
+print("Priorite aux eleve : ",file=file)
+print("{}".format(res),file = file)
+print("Satisfaction des etudiants : ",file = file)
+print("{}".format(etudiantSatisfaction(len(prefEtudiant), res, prefEtudiant, prefEtablissement, fonctionLineaire)/n),file = file)
+print("Satisfaction des etablissements : ",file = file)
 print("{}".format(etablissmentSatisfaction(len(prefEtudiant), res, prefEtudiant, prefEtablissement, fonctionLineaire)/n),file = file)
