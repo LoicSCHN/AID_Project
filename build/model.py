@@ -1,2 +1,3 @@
+
 def calculer(): 
-    print("Calculer !")
+    return [[0,1,2],[1,0,2]]
