@@ -1,19 +1,7 @@
 # Utilisation
 
-Les fichiers .ipynb contiennent le code commenté avec tous les affichages à éxécuté par étape pour comprendre comment marche l'algo.  
-Les fichiers .py contiennent le code sans commentaires ni aucun affichage.
-
-Pour lancer l'algorithme :
- * Avec main.ipynb :
-    * Exécuter les cellules
-    * La 3éme cellule va demander de rentrer le nombre d'établissement et d'élèves
-    * A la fin, le déroulement de l'algo va s'afficher et le résultat sera noté tout en bas
-    
- * Avec main.py :
-    * Exécuter le fichier main.py
-    * Une saisie est demandée
-    * Rentrer le nombre d'établissement et d'élèves
-    * Le résultat s'affiche
+Il faut lancer le fichier gui.py dans le dossier build.  
+Une interface graphique va s'ouvrir, il suffit d'entrer un nombre d'élèves/établissement et les résultats vont s'afficher dans toutes les cases.
 
 
 
