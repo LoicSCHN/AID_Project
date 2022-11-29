@@ -108,7 +108,7 @@ def fonctionLineaire(x):
 file = open("testResultats.txt", "a")
 #print(res)
 print(" ",file=file)
-print("Priorite aux eleves : ",file=file)
+print("Priorite aux etablissements : ",file=file)
 print("{}".format(res),file = file)
 print("Satisfaction des etablissement : ",file = file)
 print("{}".format(etudiantSatisfaction(len(prefEtudiant), res, prefEtudiant, prefEtablissement, fonctionLineaire)/n),file = file)

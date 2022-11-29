@@ -13,7 +13,6 @@ else:
 file = open("testResultats.txt", "w") 
 
 
-
 for i in range(0,boucle):
     os.system("python generator.py {}".format(n))
     os.system("python main.py {}")

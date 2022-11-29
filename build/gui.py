@@ -46,25 +46,26 @@ def launchAlgo():
     entry_2.insert(INSERT, "Pref etablissement : ")
     entry_2.insert(END, prefEtablissement)
     res = attribution(len(prefEtudiant), prefEtudiant, prefEtablissement)
-    entry_4.insert(INSERT, "Prio aux élèves : ")
-    entry_4.insert(END, res)
     res2 = attribution(len(prefEtudiant), prefEtablissement, prefEtudiant)
-    entry_5.insert(INSERT, "Prio aux etablissement : ")
-    entry_5.insert(END, res2)
+    entry_4.insert(INSERT, "Affectation des élèves : ")
+    entry_4.insert(END, res2)
+    
+    entry_5.insert(INSERT, "Affectation des établissements : ")
+    entry_5.insert(END, res)
     affichageSatisfaction(prefEtudiant,prefEtablissement, res, res2 )
 
 def affichageSatisfaction(prefEtudiant,prefEtablissement, res, res2 ):
-    satEtuprioEta = etudiantSatisfaction(res2, prefEtudiant)  #Changer res pour la prio
-    satEtaprioEta = etablissmentSatisfaction(res2, prefEtablissement)
-    satEtuprioEtu = etudiantSatisfaction(res, prefEtudiant)
+    satEtuprioEtu = etudiantSatisfaction(res, prefEtudiant)  #Changer res pour la prio
     satEtaprioEtu = etablissmentSatisfaction(res, prefEtablissement)
-    entry_6.insert(INSERT, "eta : ")
+    satEtuprioEta = etudiantSatisfaction(res2, prefEtudiant)
+    satEtaprioEta = etablissmentSatisfaction(res2, prefEtablissement)
+    entry_6.insert(INSERT, " ")
     entry_6.insert(END, satEtaprioEta)
-    entry_7.insert(INSERT, "etu : ")
+    entry_7.insert(INSERT, " ")
     entry_7.insert(END, satEtuprioEta)
-    entry_8.insert(INSERT, "eta : ")
+    entry_8.insert(INSERT, " ")
     entry_8.insert(END, satEtaprioEtu)
-    entry_9.insert(INSERT, "etu : ")
+    entry_9.insert(INSERT, " ")
     entry_9.insert(END, satEtuprioEtu)
     return "OK"
 
@@ -189,7 +190,7 @@ canvas.create_text(
     69.0,
     290.0,
     anchor="nw",
-    text="Priorité aux établissements : ",
+    text="Priorité aux élèves : ",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 ) 
@@ -209,7 +210,7 @@ canvas.create_text(
     422.0,
     290.0,
     anchor="nw",
-    text="Priorité aux élèves : ",
+    text="Priorité aux établissements : ",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 )   
@@ -232,7 +233,7 @@ canvas.create_text(
     69.0,
     440.0,
     anchor="nw",
-    text="Satisfaction des établissements : ",
+    text="Satisfaction des établissements : (/1)",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 ) 
@@ -252,7 +253,7 @@ canvas.create_text(
     69.0,
     505.0,
     anchor="nw",
-    text="Satisfaction des élèves : ",
+    text="Satisfaction des élèves : (/1)",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 )   
@@ -275,7 +276,7 @@ canvas.create_text(
     422.0,
     440.0,
     anchor="nw",
-    text="Satisfaction des établissements : ",
+    text="Satisfaction des établissements : (/1)",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 ) 
@@ -295,7 +296,7 @@ canvas.create_text(
     422.0,
     505.0,
     anchor="nw",
-    text="Satisfaction des élèves : ",
+    text="Satisfaction des élèves : (/1)",
     fill="#FFFFFF",
     font=("Inter SemiBold", 14 * -1)
 )   

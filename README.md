@@ -3,7 +3,7 @@
 Il faut lancer le fichier gui.py dans le dossier build.  
 Une interface graphique va s'ouvrir, il suffit d'entrer un nombre d'élèves/établissement et les résultats vont s'afficher dans toutes les cases.
 
-
+python guy.py
 
 
 # Projet : Conception et implantation d’un système d’aide à la décision

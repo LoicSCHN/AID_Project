@@ -88,14 +88,14 @@ def etudiantSatisfaction(attribution, prefEtudiant):
     for etudiant,etablissement in enumerate(attribution):
         result = (result + prefEtudiant[etudiant].index(etablissement)) # ajoute 0, 1 ou 2
        
-    return result /len(prefEtudiant)
+    return 1 - (result /(len(prefEtudiant)*len(prefEtudiant)))
 
 def etablissmentSatisfaction( attribution, prefEtablissement):
     result = 0
     for etudiant,etablissement in enumerate(attribution):
         result = result + prefEtablissement[etablissement].index(etudiant) # ajoute 0, 1 ou 2
         
-    return result /len(prefEtablissement)
+    return 1 - (result /(len(prefEtablissement)*len(prefEtablissement)))
 
 def fonctionLineaire(x):
     return x
